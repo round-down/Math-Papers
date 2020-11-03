@@ -1,0 +1,269 @@
+\documentclass[12pt, letterpaper, twosided]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{ulem}
+
+\title{An Approximating Prime Counting Function Based on a Theoretical View of the Origin of the Natural Numbers}
+\author{\textit{C.M. Hurley}}
+\date{October 19, 2018}
+
+\titleformat
+{\chapter}
+[display]
+{\bfseries\Large\itshape}
+{Section \ \thechapter}
+{0.5ex}
+{\centering}
+[\vspace{-0.5ex}]
+
+\pagenumbering{roman}
+
+	\begin{document}
+	\maketitle
+	\tableofcontents
+
+\newpage
+\section*{Preface}%PREFACE%
+\addcontentsline{toc}{section}{Preface \& Abstract}
+\hspace{0.5cm}An incredibly long title, I know; there are more with even lengthier ones so\hspace{0.15cm} get\hspace{0.15cm} used\hspace{0.15cm} to it. These kinds of titles seem to be common place in academia, and they're pretty fun and hilarious to use too if ya ask me. The aim of this manuscript is as its name suggests--prime numbers, but specifically, a counting formula for values less than or equal to some number $n$ by its derivation through a theoretical view of the natural numbers. The contents of this paper are appropriated into five sections, each with their own descriptions and (added if needed) subsections of relevant subject matter. The main goal--the approximating formula--is\hspace{0.15cm} the\hspace{0.15cm} substance\hspace{0.15cm} of\hspace{0.15cm} section two. Reason being, is that a particular \textit{Exacting Method} is helpful to better understand the principle design of the formulation of the approximating concept; this is the intent of section one. The \textit{Method} could be visually interpreted as an artist's articulate drawing while the \textit{formula} is the amateur's rough sketch of the idea--simplicity is the objective, and to get to that point, it helps to realize that the \textit{big picture} can aid in understanding the underlying idea and vise versa. Also, this technique shares, with complementary sorts of non-related methods, an annoying amount of effort to produce end results by utilizing a table of \textit{progressions}, and lies within a similar category of drudgery as writing these papers is when that $n$ value is increased. Section three is more-or-less a \textit{bonus} part of this "story;" further insight essentially, and a kind-of corollary to the first section. The accumulation of the \textbf{error} that the second part formula produces\hspace{.15cm} can\hspace{.15cm} and\hspace{.15cm} is\hspace{.15cm} tracked/organized into its own data set or table. \text{\textbf{E}} is the dubbed letter for this new mangled version (shown later) of the approximating formula that could now just be called a "generating-function;" \textit{Error Generating Function} (EGF) to be exact. Pretty creative, right? This part also provides a generalized rendition of the EGF concept where there are infinite data sets or tables for the err values. The last piece of this paper is, put plainly, just a reversal of the main idea relative to the origin of the natural numbers; the reader won't have to understand much and can just skip to section three for more information. Afterwards, there's a follow up with some charming final thoughts, and now encourage the inquiry of the claims made above.
+
+\abstract%ABSTRACT%
+\hspace{0.5cm}How did the natural numbers come into existence? Have they always been there? Was there a time before them? Are these reasonable questions to be asking? Well, assume that like the big bang--from nothing came something \textit{apparently}--they were identical in origin.  So it could be said that "from nothing--zero--came something--one--and it started progressing uniformely, by one of course, onwards to infinity breathing life into all the other natural numbers in its wake; a bushwa idea, isn't it? Assume now that once the \textit{one progression} has reached infinity--whatever that is--the \textit{two progression} starts its engines with a destination set to meet \textit{one}, also at infinity. \textit{Two} can't bring into existence the numbers that it \textit{passes through} because, well,  they already exist by work of the first progression, but by ignoring that bit and realizing that one isn't considered to be a prime number, it can therefore be assumed that \textit{two} goes into about \textit{half} of all natural numbers. All other numbers (2, 3, 5, 7, 9, 11, 13, 15, etc.) can be considered prime at this point (all odd numbers essentially), or just numbers that don't exist yet. The \textit{three progression} gets going after two has reached infinity, and excludes about a \textit{sixth} (explained in 2.1) of those odd values from that list making (2, 3, 5, 7, 11, 13, 17, 19, 21, 23, 25, 29, \dots) the new prime numbers. Now, four comes after three (no kidding) and would be the next logical step to take, but understand that it would be a waste of time to make a progression out of four because it wouldn't alter the list in any way; think of it like this: if \textit{two} took a long walk along some path, \textit{four} skips along the same path. It'll make more sense to just use the successive values in each new generation of the next \textit{primes list}. Using that rule, the \textit{five progression} comes next and whad'ya know, theres a new set of prime numbers; repeat until satisfied. From all this, the hypothesis is that \textbf{\textit{prime numbers govern themselves}}.\newline The hypothetical thought presented here is elaborated on further within section 1.1 and all subsections. So with this being said, the reader should be able to climb up this rickety ladder of perspective to the view point built overlooking the metaphysical sea of numbers--that's another objective at most.
+ 
+\pagenumbering{arabic}
+
+\chapter{Exacting Method}%CHAPTER 1%
+\setcounter{page}{1}
+\begin{center}\textit{The purest most imaginative form of mathematics resembles that of a wild horse. Its counterpart, the formal saddled horse.}\end{center}
+
+\section*{Description}
+\addcontentsline{toc}{section}{Section 1 Description}
+\hspace{0.5cm}From a method of realization, identifiying the provenance of primes through \textit{unity} and an affecting assumption of governance, to number enumerating and formula work, this section establishes the framework for the entire paper.
+
+\section{Method of Realization of Prime Numbers}
+\hspace{0.5cm}The number line or \textit{Natural} number line with an arithmetic progression of 1--unity--is of particular interest because when progressing, it creates \textit{double, triple, quadruple, \dots} unities; $(1*n)$. And of which are all the known numbers, $(2, 3, 4, 5, \dots)$. If now, any of these greater unities $n$ wish to be their own arithmetic progressions of $(1*n)$ or $(unity*n)$, then they create their own \textit{series} (number line).
+\begin{flushleft}
+{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}
+\begin{tabular}{|r|l|}
+\hline
+$Single-Unity\Leftrightarrow (1, 2, 3, 4, 5, 6, 7, \dots, \infty)$ & When moving to greater unities, each\\
+$Double-Unity\Leftrightarrow (2, 4, 6, 8, 10, 12, 14, \dots, \infty)$ & series passes through specified numbers\\
+$Triple-Unity\Leftrightarrow (3, 6, 9, 12, 15, 18, 21, \dots, \infty)$ & but all originally belong to single-unitiy.\\
+\hline
+\end{tabular}}\newline\end{flushleft}
+
+\noindent Single Unity goes into all naturals while Double Unity skips and goes through \textit{every other} number. These others are defined as \textbf{even} because they are all divisible by the ladder. The opposite numbers are called \textbf{odd}, which are not divisible by this unity.
+Triple Unity is an odd value like single unity, and the progression passes through both even and odds; not all of them of course. Any more even progressions can be defined to simply follow along Double Unity's path because it passes through\hspace{0.15cm} every\hspace{0.15cm} even number, and odd number progressions as "followers" of Single and Double Unity (they go through numbers of both series' e.g Triple Unity).\\
+So since there is \underline{no} known progression where the difference of the consecutive terms are equal to $a_1$ (the first term) that passes through all odd numbers and where $a_1$ is derived from Single Unity, then \textit{holes} have to be admittedly left within the natural number line. These leftovers are called primes, and they are in no other series except the first.
+
+	\subsection{The Governing Theory of Primes}
+	\hspace{0.5cm}If the Natural number line, with 1 as unity of course and with every $(1*n)$ series progressing arithmetically by itself, be thought of as \textit{slits} hung up in vertical columns (each dropped to its first ten) side-by-side, patterns arise like shark fins breaking the surface. Observe.
+\begin{align*}
+&1   & &2     & &3    & &4    & &5    & &6    & &7    & &8    & &9    & &10  & &11    & &12     & &13     & &14   & &15  & &16  & &17     & &\\
+&2   & &4     & &6    & &8    & &10  & &12  & &14  & &16  & &18  & &      & &22    & &24     & &26     & &28   & &30  & &32  & &34     & &\\
+&3   & &6     & &9    & &12  & &      & &18  & &21  & &24  & &27  & &      & &33    & &36     & &39     & &42   & &      & &48  & &51     & &\\
+&4   & &8     & &12  & &16  & &      & &24  & &28  & &32  & &36  & &      & &44    & &48     & &52     & &56   & &      & &64  & &68     & &\\
+&5   & &10   & &15  & &20  & &      & &30  & &35  & &40  & &45  & &      & &55    & &60     & &65     & &70   & &      & &80  & &85     & &\dots\\
+&6   & &      & &18   & &      & &      & &      & &42  & &      & &54  & &      & &66    & &         & &78     & &       & &      & &      & &102   & &\\
+&7   & &      & &21   & &      & &      & &      & &49  & &      & &63  & &      & &77    & &         & &91     & &       & &      & &      & &119   & &\\
+&8   & &      & &24   & &      & &      & &      & &56  & &      & &72  & &      & &88    & &         & &104   & &       & &      & &      & &136   & &\\
+&9   & &      & &27   & &      & &      & &      & &63  & &      & &81  & &      & &99    & &         & &117   & &       & &      & &      & &153   & &\\
+&10 & &      & &30   & &      & &      & &      & &70  & &      & &90  & &      & &110  & &         & &130   & &       & &      & &      & &170   & &
+\end{align*}
+As somewhat described before, 1 passes through all numbers, 2 passes through all even numbers, and (5 and 10) pass through all values with (5 and 0) in their ones place. Now there are several kinds of \textit{visual systems} here, and therefore, only a few will be pointed out. For starters, take into consideration that the digit in the ones place for primes consist of $(1, 3, 7, 9)$--except (2 and 5). These values relate in a way where the "ones place value digit" is \textit{upsidedown} in another progression; an eye-opening sight, really.
+\[ 
+\left \{
+  \begin{tabular}{cccc}
+  3    & 7    & 11    & 19  \\
+  6    & 14  & 22    & 38  \\
+  9    & 21  & 33    & 57  \\
+  12  & 28  & 44    & 76  \\
+  15  & 35  & 55    & 95  \\
+  18  & 42  & 66    & 114\\
+  21  & 49  & 77    & 133\\
+  24  & 56  & 88    & 152\\
+  27  & 63  & 99    & 171\\
+  30  & 70  & 110  & 190
+  \end{tabular}
+\right \}
+{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}
+\begin{tabular}{|p{8.5cm}|}
+\hline
+Witness the relation of (3 and 7) and where the former
+is \textit{three more than} ten and the ladder is 
+\textit{three less than} ten; same sheme applies to
+(1 and 9) or (11 and 19). \\
+It would also be relevant to mention that these
+"slits" always meet in the middle at 5 and/or 0 when
+compared to non-prime progressions.\\
+\hline
+\end{tabular}}
+\]
+The \textbf{could've been prime numbers}, the "odd numbers the prime progressions have \textit{\textbf{control}} of," or simply the free spirited ones now washed over by a wave (progression) and mixed within are all odd products of that prime figure multiplied by some value with a ones place of (1, 3, 7, or 9)--all of which are properly labed below. \\
+$$Set (1 \rightarrow 10)$$
+\begin{align*}
+& &(3*1)=\bf{3}   & &(7*1)=\bf{7}   & &(11*1)=\bf{11}   & &(19*1)=\bf{19}   & &\\
+& &6   & &14 & &22   & &38   & &\\
+& &(3*3)=\bf{9}   & &(7*3)=\bf{21} & &(11*3)=\bf{33}   & &(19*3)=\bf{57}   & &\\
+& &12 & &28 & &44   & &76   & &\\
+& &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+15 \\
+\hline
+\end{tabular}} & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+35 \\
+\hline
+\end{tabular}} & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+55 \\
+\hline
+\end{tabular}}   & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+95 \\
+\hline
+\end{tabular}}   & &\\
+& &18 & &42 & &66   & &114 & &\\
+& &(3*7)=\bf{21} & &(7*7)=\bf{49} & &(11*7)=\bf{77}   & &(19*7)=\bf{133} & &\\
+& &24 & &56 & &88   & &152 & &\\
+& &(3*9)=\bf{27} & &(7*9)=\bf{63} & &(11*9)=\bf{99}   & &(19*9)=\bf{171} & &\\
+& &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+30 \\
+\hline
+\end{tabular}} & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.4cm}|}
+\hline
+70 \\
+\hline
+\end{tabular}} & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.6cm}|}
+\hline
+110 \\
+\hline
+\end{tabular}} & &{\renewcommand{\arraystretch}{1.25}
+\renewcommand{\tabcolsep}{0.1cm}\begin{tabular}{|p{0.6cm}|}
+\hline
+190 \\
+\hline
+\end{tabular}}
+\end{align*}
+The idea suggests, as implied in the abstract, that the number line (0, 1, 2, 3, ...) is more dynamic in the face of \textit{time}, and indicates that primes--over time--govern themselves along with the properties of all other numbers besides \textit{unity}. Now to prove that this is true is beyond this paper, but the perception has contributed to some work meant to solidify the understanding by attacking the primes at another angle\footnote{To better understand this concept as a visual learner, try to imagine the number line as a dynamic structure, beginning with 1, weaving in and out of itself like a rope. Each new prime progression (2, 3, 5, ...) another string slowly making a thicker design. At full scale, the prime numbers seem to be deciding which numbers to become a factor of, and leaving others (primes) to eventually do the same.}.
+
+
+\section{Prime Counting Function}
+\hspace{0.5cm}
+
+A counting method based on the theoretical view established in the preceeded readings operates as such. \\
+Say the number of primes less than or equal to 25 is desired, write out the list of all the numbers from 1 to 25. \\
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}4 \hspace{0.5cm}5 \hspace{0.5cm}6 \hspace{0.5cm}7 \hspace{0.5cm}8 \hspace{0.5cm}9 \hspace{0.5cm}10 \hspace{0.5cm}11 \hspace{0.5cm}12 \hspace{0.5cm}13 \hspace{0.5cm}14 \hspace{0.5cm}15 \hspace{0.5cm}16 \hspace{0.5cm}17 \hspace{0.5cm}18 \hspace{0.5cm}19 \hspace{0.5cm}20 \hspace{0.5cm}21 \hspace{0.5cm}22 \hspace{0.5cm}23 \hspace{0.5cm}24 \hspace{0.5cm}25
+\end{center}
+Send 2 through the setup by crossing out all its multiples except itself.
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}\sout{4} \hspace{0.5cm}5 \hspace{0.5cm}\sout{6} \hspace{0.5cm}7 \hspace{0.5cm}\sout{8} \hspace{0.5cm}9 \hspace{0.5cm}\sout{10} \hspace{0.5cm}11 \hspace{0.5cm}\sout{12} \hspace{0.5cm}13 \hspace{0.5cm}\sout{14} \hspace{0.5cm}15 \hspace{0.5cm}\sout{16} \hspace{0.5cm}17 \hspace{0.5cm}\sout{18} \hspace{0.5cm}19 \hspace{0.5cm}\sout{20} \hspace{0.5cm}21 \hspace{0.5cm}\sout{22} \hspace{0.5cm}23 \hspace{0.5cm}\sout{24} \hspace{0.5cm}25
+\end{center}
+Take mental note that the amount of excluded digits is equal to $\frac{25-1}{2}-1$. Afterward strikethrough all multiples of 3 that haven't already been crossed out--which just happen to be only odd values. (\textbf{Bolded} here for better visual representation).
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}\sout{4} \hspace{0.5cm}5 \hspace{0.5cm}\sout{6} \hspace{0.5cm}7 \hspace{0.5cm}\sout{8} \hspace{0.5cm}\textbf{9} \hspace{0.5cm}\sout{10} \hspace{0.5cm}11 \hspace{0.5cm}\sout{12} \hspace{0.5cm}13 \hspace{0.5cm}\sout{14} \hspace{0.5cm}\textbf{15} \hspace{0.5cm}\sout{16} \hspace{0.5cm}17 \hspace{0.5cm}\sout{18} \hspace{0.5cm}19 \hspace{0.5cm}\sout{20} \hspace{0.5cm}\textbf{21} \hspace{0.5cm}\sout{22} \hspace{0.5cm}23 \hspace{0.5cm}\sout{24} \hspace{0.5cm}25
+\end{center}
+The numbers that 3 touches are$[9, 15 \hspace{0.15cm}\&\hspace{0.15cm} 21]$. Now move on to the last number that can eliminate a figure from the list, 5. (\textit{Italicized} below).
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}\sout{4} \hspace{0.5cm}5 \hspace{0.5cm}\sout{6} \hspace{0.5cm}7 \hspace{0.5cm}\sout{8} \hspace{0.5cm}\textbf{9} \hspace{0.5cm}\sout{10} \hspace{0.5cm}11 \hspace{0.5cm}\sout{12} \hspace{0.5cm}13 \hspace{0.5cm}\sout{14} \hspace{0.5cm}\textbf{15} \hspace{0.5cm}\sout{16} \hspace{0.5cm}17 \hspace{0.5cm}\sout{18} \hspace{0.5cm}19 \hspace{0.5cm}\sout{20} \hspace{0.5cm}\textbf{21} \hspace{0.5cm}\sout{22} \hspace{0.5cm}23 \hspace{0.5cm}\sout{24} \hspace{0.5cm}\textit{25}
+\end{center}
+Seemingly, 25 is the only value removed because every next prime number squared is the first factor of that product. The remaining numbers should therefore be prime except 1.
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}5 \hspace{0.5cm}7 \hspace{0.5cm}11 \hspace{0.5cm}13 \hspace{0.5cm}17 \hspace{0.5cm}19 \hspace{0.5cm}23
+\end{center}
+And then,
+$$25-(\frac{25-1}{2}-1)-3-1 = 10$$
+But since 1 isn't prime,
+$$(25-(\frac{25-1}{2}-1)-3-1)-1 = 9$$
+\begin{center}
+\big[ 2 \hspace{0.5cm}3 \hspace{0.5cm}5 \hspace{0.5cm}7 \hspace{0.5cm}11 \hspace{0.5cm}13 \hspace{0.5cm}17 \hspace{0.5cm}19 \hspace{0.5cm}23 \big]
+\end{center}
+To generalize this method into a formula, let $n = $ any natural number, $p_{1}, p_{2}, \dots, p_{i}$ as consecutive primes--$p_{1}$ equalling to 2, and $f$ all the multipliers whose product is less than or equal to $n$.
+$$n-\sum_{k=p_{1}}^{p_{i};p_{i}^2 \leq n}\big| (k*f) \leq n \big| - 1 = \big[ \text{the number of primes} \leq n \big]$$
+Which is read as, "$n$ minus the sum, from $p_{1}$ to the highest prime number that is less than or equal to $n$ when squared, of each set\footnote{The set/tables of multiples for each prime factor, except 2, that are essential for the use of this work is on page INSERT PAGE NUMBER HERE.} of the total of multiples for each factor less than or equal to $n$ minus 1 equals the number of primes less than or equal to $n$.
+\newpage
+	\subsection{Reworked}
+In order to minimisize the extent of the tables of multiples, the statement can be algebraically moved to automatically solve for the yielded amount of multiples for 2 necessary to subtract from $n$.\\ \\
+Begin by rewriting the equation before the formula.
+$$(25-(\frac{25-1}{2}-1)-3-1)-1 = 9$$
+Simplify and replace the$[-3, \hspace{0.15cm}\&\hspace{0.15cm} -1]$ with the summation--raising $k=p_{1}$ to $k=p_{2}$.
+$$n-(\frac{n-1}{2})-\sum_{k=p_{2}}^{p_{i};p_{i}^2 \leq n}\big| (k*f) \leq n \big|$$
+Add a method to differentiate between odd and even $n$ values to avoid decimals.
+$$n-\frac{n}{2}+\frac{\sum_{k=0}^{n+1}(-1)^{k}}{2}-\sum_{k=p_{2}}^{p_{i};p_{i}^2 \leq n}\big| (k*f) \leq n \big|$$
+Facilitate further and finish.
+$$\frac{1}{2}(n+\sum_{k=0}^{n+1}(-1)^{k}-2\sum_{k=p_{2}}^{p_{i};p_{i}^2 \leq n}\big| (k*f) \leq n \big|) = \big[ \text{the number of primes} \leq n \big]\footnote{This is kinda useless when actually counting prime numbers makes more sense; which is just a complicated way of counting.}$$
+
+
+
+
+\chapter{Approximating Formula}%CHAPTER 2%
+\begin{center}\textit{Nature, by design, guards her secrets well.}\end{center}
+\section*{Description}
+\addcontentsline{toc}{section}{Section 2 Description}
+\hspace{0.5cm}INSERT SUMMARY HERE
+
+\section{Derivation}
+\hspace{0.5cm}The method of set counting built upon in section 1.2 is streamlined here quite simply by dividing $n$ by the current prime number multiplied by the previous prime. Giving a rough estimate quotient, currently more accurate the smaller the value of $n$ is, of the amount of numbers the current prime goes into first; if that wasn't confusing enough, here's an example where $n = 10$.
+\begin{center}
+1 \hspace{0.5cm}2 \hspace{0.5cm}3 \hspace{0.5cm}\sout{4} \hspace{0.5cm}5 \hspace{0.5cm}\sout{6} \hspace{0.5cm}7 \hspace{0.5cm}\sout{8} \hspace{0.5cm}\textbf{9} \hspace{0.5cm}\sout{10}
+\end{center}
+By generalizing the multiples of the 2 and 3 progressions, $\frac{10}{2} - 1 = 4$ is the amount of numbers 2 gets rid of and $\frac{10}{2*3} - 1 \approx 1; = .6666+$ which is about as many as 3 takes out. And therefore,
+\begin{center}
+$10 - (\frac{10}{2} - 1)  - (\frac{10}{6} - 1) - 1 \approx 4 =  [\text{the number of primes}\hspace{0.1cm}\leq n]$
+\end{center}
+Intuitively speaking, after 2 passes through all even numbers, half of the 3 progression to 10 should be counted--3 and 9--while the other is disregarded. But since 3 isn't included 1 is subtracted. This idea seems like it works and does pretty accurately for small values, but as $n$ is increased, the structure of the approximation falls and grows significantly larger than the actual number of primes. The reason is due to the fact that prime progressions can have the same multiples\footnote{The problem of multiples is made visually apparent within Section 3.}; an obvious point once realized in the extent of numbers in total. And until this problem can be navigated, the below function should be taken as just a partial solution.
+
+$$\frac{1}{2}(n+\sum_{k=0}^{n+1}(-1)^{k}-2\sum_{k=p_{2}}^{p_{i};p_{i}^{2}\leq n}\frac{n}{k(k+1)}) \approx [\text{the number of primes}\hspace{0.1cm}\leq n]$$
+
+\section{Error Generating Function (EGF)}
+\hspace{0.5cm}
+
+$$\frac{1}{2}(n+\sum_{k=0}^{n+1}(-1)^{k}+2\text{\textbf{E}} -2\sum_{k=p_{2}}^{p_{i};p_{i}^{2}\leq n}\frac{n}{k(k+1)}) = [\text{the number of primes}\hspace{0.1cm}\leq n]$$
+
+$$\hspace{.5cm}\therefore
+\frac{1}{2}(n+\sum_{k=0}^{n+1}(-1)^{k}+2 [\text{the number of primes}\hspace{0.1cm}\leq n] -2\Big( \sum_{k=p_{2}}^{p_{i};p_{i}^{2}\leq n} \Big\{  \frac{n}{k(k+1)} \Big\}  \Big)) = \text{\textbf{E}}$$
+
+
+
+
+\chapter{Formula for all Natural Numbers not Prime}%CHAPTER 3%
+
+\section*{Description}
+\addcontentsline{toc}{section}{Section 3 Description}
+\hspace{0.5cm}INSERT SUMMARY HERE
+
+\section{Backpedaling the Idea}
+\hspace{0.5cm}
+
+
+$$non\text{-}sum\sum_{k=2}^{n-2}\{  -(k^2)+(n+1)k  \} \neq prime \hspace{0.1cm} number; n \geq 3$$
+
+
+\newpage
+\section*{Final Thoughts}%CONCLUSION%
+\addcontentsline{toc}{chapter}{Final Thoughts}
+\hspace{0.5cm}
+
+\newpage
+\section*{Data Tables}%TABLES%
+\addcontentsline{toc}{chapter}{Data Tables}
+\hspace{0.5cm}
+\section*{test}
+\section*{test}
+\section*{test}
+
+	\end{document}

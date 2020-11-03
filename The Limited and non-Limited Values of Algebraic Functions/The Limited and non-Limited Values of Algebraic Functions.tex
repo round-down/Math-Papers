@@ -1,0 +1,39 @@
+\documentclass[12pt, letterpaper, twosides]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+
+\title{The Limited and non-Limited Values of Algebraic Functions\footnote{Revised February 6th, 2020}}
+\author{C.M. Hurley}
+\date{September 25, 2018}
+
+	\begin{document}
+	\maketitle
+
+
+For the sake of \textit{ease of typing} on my part, I'll be referring to the words "Limited" and "non-Limited" as "L" and "nL" respectively. The L and nL values, as I'm sure you might be wondering, \textit{\textbf{are}} and \textit{\textbf{aren't}} all the possible outcomes, $y$ values, to algebraic functions. Take for instance the function $f(x)=x^2$. The L values are all the possible $y$ values; For this paper I'll just be worrying about the integer $\mathbb{(Z)}$ inputs and outputs. And all the nL values are, well, you guessed it, all the values that the said function cannot be equal to. Of course, this is better said visually and therefore the L values of $f(x)=x^2$ are,
+$$(1^2, 2^2, 3^2, 4^2, 5^2, 6^2, \dots)=(1, 4, 9, 16, 25, 36, \dots)$$
+And the nL values, in this case, are all the values in between,
+$$(\dots, 2, 3, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, \dots)$$
+
+This next example will help wrap things up so we can make the leap to generalize this thing, idea, or whatever and get to the really interesting stuff. The function for this example will \textit{add} and \textit{subtract} all other possible $x^2$'s, $y$'s, to the previous one. Now, as you might be able to tell, this can get pretty complicated so don't get discouraged because I'll unveil the pattern with the progression of these values in a few, and, in the least case, will have you leave here with some wonder and/or respect for it all. The function is therefore, 
+$$f(x)=x^2 \pm(y_1, y_2, y_3, \dots, y_m)$$
+I'm sure this could be represented in other ways, but we'll go with this one because it's stuck with me. So, I'll leave it to you to figure out all the L and nL values if you want. If not just keep reading ahead fullspeed.
+
+Alright, given that you investigated yourself or not, here are the L values,
+$$(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, \dots)$$
+And the nL values,
+$$(6, 14, 22, 30, 38, 42, 46, 54, 62, 66, 70, 78, 86, 94, \dots)$$
+By further investigation, it's found that most of the L values can all be represented by these four functions:
+$$x^2 \hspace{1cm} x^2 \pm 1 \hspace{1cm} 2x-1 \hspace{1cm} 4x$$
+Of course, the nL values are all \underline{but} the outputs to those functions. And the way both examples progress are the following two series:
+$$(1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, \dots)$$
+$$(8, 8, 8, 8, 4, 4, 8, 8, 4, 4, 8, 8, 8, 8, 8, 4, 4, 8, 8, 4, 4, 8, 4, 4, \dots)$$
+
+With the little that's just been said, I think this has some insightful potential and is really dang cool, but the underlying mechanism has yet to show itself in its entirety, and will leave this for future me to work on later and/or someone interested in developing this further on their own; I have more research notes on the subject. Before closing I'll present the generalized form for the problem. So without further-a-do, the general form can be represented as such,
+
+$$nL(x^n \pm y_1, y_2, y_3, \dots) \neq L(x^n \pm y_1, y_2, y_3, \dots)$$
+
+
+
+
+	\end{document}

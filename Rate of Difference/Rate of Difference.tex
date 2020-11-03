@@ -1,0 +1,218 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\title{Rate of Difference}
+\author{\textit{C.M. Hurley} \thanks{With guidance from \textit{Professor Luke Horsley}}}
+\date{October 13, 2018}
+
+	\begin{document}
+	\maketitle
+
+\section*{Introduction}
+\hspace{0.5cm}I'm not going to define what that title means just yet because it might not be what you'd expect and I don't want to confuse anyone from the get-go; It even confuses me sometimes, and I apparently know what I'm talking about. You can therefore assign it the same meaning as, say, an elephant for now. What I am going to do though, is point and/or guide you in the direction of this proposedly interesting subject; interesting, in the least case, just for me. Then we'll get into that mess of "name calling" and formula writing, and, honestly, just pointing at it should be enough, but a lot of people are into that mess of stuff; I know I am. Note: Before we get into it, I want to say that a hefty amount of related research has been done and must insist that you get a good grasp of it in that head of yours so you can have it in the back of your mind if you decide to read another paper related to the same subject, and mainly so I don't have to write about it again. Also, a mention-able use for this thing is creating functions for any set of values what-so-ever, but we'll get into that some other time; hopefully that's got your eyebrows in some kind of aroused position.
+
+\section*{Research}
+\paragraph{The Pattern}Now that I've probably lured you into reading this, I'm confident you just want to get straight to it; I'd like it that way anyways. Alright, well here it is, "By taking the consecutive differences between the values, and then those values, and then those, etc. of certain algebraic functions the same number of times that the highest exponent is, then you will end up with the factorial of that same exponent." What? ...Really? Yup! Either if you got what I just said or not, just know that what I've just told you isn't entirely the whole picture, and I didn't tell you everything because I'm doing that step by step, each a bit more complicated thing. To \textit{prove} and/or \textit{bring to light} the former statement, take for example the function, $f(x)=x^2$. And note that the values you're about to see are set up in the form of a triangle, "pascal's triangle" if you want to get technical, with the $y$ values of the function at the bottom and the rows of consecutive differences the next row up, then those of the next, and so on. They are listed below as such,
+$$\dots, 2, 2, 2, 2, 2, 2, \dots$$
+$$\dots, 1, 3, 5, 7, 9, 11, 13, \dots$$
+\begin{equation}\dots, 0, 1, 4, 9, 16, 25, 36, 49, \dots\end{equation}
+Also $f(x)=x^3$,
+$$\dots, 6, 6, 6, 6, \dots$$
+$$\dots, 6, 12, 18, 24, 30, \dots$$
+$$\dots, 1, 7, 19, 37, 61, 91, \dots$$
+\begin{equation}\dots, 0, 1, 8, 27, 64, 125, 216, \dots\end{equation}
+And so on... Take it upon yourself to calculate the rest (works if you go negative too).
+
+If you don't calculate anything and just leave the $x$'s in place of the $y$'s you'll have something like this for the consecutive rows of differences,
+$$\dots$$
+\begin{equation*}
+\begin{split}
+\dots, (x+3)^n-3(x+2)^n+3(x+1)&^n-x^n,  \\
+(x+4)^n-3(x+3)&^n+3(x+2)^n-(x+1)^n, \dots
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\dots, (x+2)^n-2&(x+1)^n+x^n, (x+3)^n-2(x+2)^n+(x+1)^n, \\
+&(x+4)^n-2(x+3)^n+(x+2)^n, \dots
+\end{split}
+\end{equation*}
+$$\dots, (x+1)^n-x^n, (x+2)^n-(x+1)^n, (x+3)^n-(x+2)^n, (x+4)^n-(x+3)^n, \dots$$
+\begin{equation}\dots, x^n, (x+1)^n, (x+2)^n, (x+3)^n, (x+4)^n, \dots\end{equation}
+See the neat binomial pattern? Take note of it because it'll help us make our sick complicated formula later.
+
+\subparagraph{Limitations}This next part, which is, in my opinion, the best part, is going to show you the efforts derived from trying to \textit{break the pattern} (the top/last row of constant numbers after taking the consecutive differences). On a side thought, I hope I haven't lost you anywhere. If not, then Great! You're on the fast track to formula city here soon; wicked! The first thing tested was  adding and subtracting more variables to the function. Let's see what happens in $f(x)=x^2+x^3$,
+$$\dots, 6, 6, 6, \dots$$
+$$\dots, 8, 14, 20, 26, \dots$$
+$$\dots, 2, 10, 24, 44, 70, \dots$$
+\begin{equation}\dots, 0, 2, 12, 36, 80, 150, \dots\end{equation}
+Alright...since adding works, subtracting probably follows (it does). Well, what about multiplying and dividing? Okay, let's test the following functions in the same order that they're listed: $f(x)=5x^2$, $f(x)=\frac{x^4}{7}$, and $f(x)=\frac{3x^2}{2}-\frac{2x^3}{5}$.
+$$\dots, 10, 10, 10, \dots$$
+$$\dots, 5, 15, 25, 35, \dots$$
+\begin{equation}\dots, 0, 5, 20, 45, 80, \dots\end{equation}
+Ah-Ha! So the above statement "By taking the consecutive differences between the values, and then those values, and then those, etc. of certain algebraic functions the same number of times that the highest exponent is, then you will end up with the factorial of that same exponent." is false (to a certain degree); I have to admit though, it really didn't take long to break the dang thing. But let's keep going and we'll figure out why it's broken and why there's still a row of constants at the top in just a moment. I know the second function we're about to test will also be constant since that whole "you don't have to actually divide if they all have the same denominator" thing. But I'll still list it below since it's a function with an even higher degree; There's also something about the function, $f(x)=x^4$, that'll really knock your socks off, but thats a subject for another paper. Anyways, here's the triangle do-hickey for $f(x)=\frac{x^4}{7}$,
+$$\dots, \frac{24}{7}, \frac{24}{7}, \dots$$
+$$\dots, \frac{36}{7}, \frac{60}{7}, \frac{84}{7}, \dots$$
+$$\dots, \frac{14}{7}, \frac{50}{7}, \frac{110}{7}, \frac{194}{7}, \dots$$
+$$\dots, \frac{1}{7}, \frac{15}{7}, \frac{65}{7}, \frac{175}{7}, \frac{369}{7}, \dots$$
+\begin{equation}\dots, \frac{0}{7}, \frac{1}{7}, \frac{16}{7}, \frac{81}{7}, \frac{256}{7}, \frac{625}{7}, \dots\end{equation}
+Pretty cool, huh? Check out the last one, $f(x)=\frac{3x^2}{2}-\frac{2x^3}{5}=\frac{15x^2}{10}-\frac{4x^3}{10}$,
+$$\dots, \frac{-24}{10}, \frac{-24}{10}, \dots$$
+$$\dots,  \frac{6}{10},  \frac{-18}{10},  \frac{-42}{10}, \dots$$
+$$\dots,  \frac{11}{10},  \frac{17}{10},  \frac{-1}{10},  \frac{-43}{10}, \dots$$
+\begin{equation}\dots,  \frac{0}{10},  \frac{11}{10},  \frac{28}{10},  \frac{27}{10},  \frac{-16}{10}, \dots\end{equation}
+So, why have they essentially been broken? Since this last one includes a whole array of stuff that's been tested (subtraction, multiplication, division), let's just look at that one, and it'll be pretty easy to figure out the other two using an updated statement. Cool? ...Cool.
+
+Let's look at the pyramid thing--yes, we'll get into name callin' in a second--for the separate terms of the function for (7). The first term, $\frac{15x^2}{10}$, is literally just like this,
+$$\dots, \frac{15*2}{10}, \frac{15*2}{10}, \frac{15*2}{10}, \dots$$
+$$\dots, \frac{15*1}{10}, \frac{15*3}{10}, \frac{15*5}{10}, \frac{15*7}{10}, \dots$$
+\begin{equation}\dots, \frac{15*0}{10}, \frac{15*1}{10}, \frac{15*4}{10}, \frac{15*9}{10}, \frac{15*16}{10}, \dots\end{equation}
+And $-\frac{4x^3}{10}$ is like this,
+$$\dots,  -\frac{4*6}{10}, -\frac{4*6}{10}, -\frac{4*6}{10}, \dots$$
+$$\dots, -\frac{4*6}{10}, -\frac{4*12}{10}, -\frac{4*18}{10}, -\frac{4*24}{10}, \dots$$
+$$\dots, -\frac{4*1}{10}, -\frac{4*7}{10}, -\frac{4*19}{10}, -\frac{4*37}{10}, -\frac{4*61}{10}, \dots$$
+\begin{equation}\dots, -\frac{4*0}{10}, -\frac{4*1}{10}, -\frac{4*8}{10}, -\frac{4*27}{10}, -\frac{4*64}{10}, -\frac{4*125}{10}, \dots\end{equation}
+You can test those values using some fancy non-calculation subtraction, or whatever, too, but it'll be found that it's just the same as multiplying by the 15 or 4 and dividing by 10 for all values in each row. The next part  (adding the two terms, $\frac{15x^2}{10}$ and $-\frac{4x^3}{10}$) is, very simply put,  like sliding two transparent pictures together to get an even greater image. There results listed below,
+$$\dots,  -\frac{4*6}{10}, \dots$$
+$$\dots, (\frac{15*2}{10}-\frac{4*6}{10}), (\frac{15*2}{10}-\frac{4*12}{10}), \dots$$
+$$\dots, (\frac{15*1}{10}-\frac{4*1}{10}), (\frac{15*3}{10}-\frac{4*7}{10}), (\frac{15*5}{10}-\frac{4*19}{10}), \dots$$
+\begin{equation}\dots,  (\frac{15*0}{10}-\frac{4*0}{10}), (\frac{15*1}{10}-\frac{4*1}{10}), (\frac{15*4}{10}-\frac{4*8}{10}), (\frac{15*9}{10}-\frac{4*27}{10}), \dots\end{equation}
+Right before the two 'images' are slid together, it should be noticed that (9) has 4 rows and (8) only has 3. The fourth row, after merging the two images, is therefore unaffected, and we can see that the row of constants is only dependent on changes that occur directly (through multiplication and division) to the variable with the highest exponent and if the term is either positive or negative; That's freakin' neat! But, you might ask, "That told me why the original statement was wrong/broken for these functions, but why is there still a row of constants?" Well, I was hoping you weren't going to ask that, so let's go ahead and really \textit{mess it up}, and I'll show you why.
+
+\subparagraph{Definitions}First things first though, I did say we would get some names for the whole process and for the row of constants at the end. Which also means you can stop thinking that the title represents an elephant; Ha-ha. Alright, so the process to actually get to the row of constants and the amount of times the consecutive differences is taken to get to another row is called \textit{(The) Rate of Difference} (\textit{RoD} for short). And the row of constants is called \textit{(The) Rate}. In context, take for example (1) and (2) again,
+$$\dots, 2, 2, 2, 2, 2, 2, \dots$$
+$$\dots, 1, 3, 5, 7, 9, 11, 13, \dots$$
+$$\dots, 0, 1, 4, 9, 16, 25, 36, 49, \dots$$
+$$\dots, 6, 6, 6, 6, \dots$$
+$$\dots, 6, 12, 18, 24, 30, \dots$$
+$$\dots, 1, 7, 19, 37, 61, 91, \dots$$
+$$\dots, 0, 1, 8, 27, 64, 125, 216, \dots$$
+The \textit{RoD} and \textit{Rate} for example (1) is \textbf{2}. Example (2) has a \textit{RoD} of \textbf{3} and  a \textit{Rate} of \textbf{6}; satisfied? I know I am. And if you're wondering "Why the word "Rate"? Don't you need to divide or whatever?" Well yeah, but for now just divide those two numbers by one. I haven't gotten into that, and it might be something you should look into.
+
+\subparagraph{Explanation}So, why is there still a row of const--err--I mean, why is there still a \textit{Rate} for the functions specified? To be honest, I don't know \textit{exactly} why the whole process works; I only \textit{understand} it intuitively. But, I can tell you a few things that are required for the pattern to bloom, and from that we'll also know, almost simultaneously, what we need to do to break it. Starting off, let's take a look at the domain (series of $x$'s) before they are sent through the functions to get \textit{disfigured}--pun intended. Those values are, of course, of an arithmetic progression; take a look,
+\begin{equation}\dots, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, \dots\end{equation}
+It is, or at least seems to be, required that the input values progress arithmetically. On top of that, a function's capabilities must be limited to just $f(x)=\frac{a_{1}*x^n}{b_{1}} \pm \dots$ as partially stated just a second ago. From the former, let's see what happens when the domain doesn't progress uniformly. \newline
+
+\noindent
+Let this series be an arbitrary set of numbers like, ($1, 3, 7, 11, 9, 12, 4$), and let the function be $f(x)=x^2$, therefore
+$$32, 32, -113, 103, 65$$
+$$8, 40, 72, -40, 63, 128$$
+\begin{equation}1, 9, 49, 121, 81, 144, 16\end{equation}
+
+$$2, 4, 4, -2, 3, -8$$
+\begin{equation}1, 3, 7, 11, 9, 12, 4\end{equation}
+As you can see, the \textit{Rate} was trying it's best to stay at the value 32, but in the end it couldn't because the main series ($1, 3, 7, 11, 9, 12, 4$) doesn't progress arithmetically (shown in (13)). Let's now, look at a domain that \textbf{does} progress uniformly but by something other than 1. Take for example this new series, ($\dots, 2, 6, 10, 14, 18, 22, 26, \dots$), and let the function again be $f(x)=x^2$, therefore
+$$\dots, 32, 32, 32, 32, 32, \dots$$
+$$\dots, 32, 64, 96, 128, 160, 192, \dots$$
+\begin{equation}\dots, 4, 36, 100, 196, 324, 484, 676, \dots\end{equation}
+
+$$\dots, 4, 4, 4, 4, 4, 4, \dots$$
+\begin{equation}\dots, 2, 6, 10, 14, 18, 22, 26, \dots\end{equation}
+Of course, this always holds true, and hopefully you are starting to know this intuitively; maybe even before I got to this part. I want to point out, because you may have already noticed, that there is nothing directly multiplying or dividing $x^2$. So how is the \textit{Rate} $32$ then? Well since we know that part of the answer must be the factorial of the highest power, then--as you'll find out through further testing--the rest of the answer is the number that progresses the main series uniformly (4 in this case) raised to whatever the highest power $x$ is raised to (which is 2) multipled by the factorial of the highest power. The answer in our case is $4^2*2!=32$. Remember this because we'll use it for a simple formula in a little bit. Anyways, in this next one, let's stay true to my word and really \textit{mess it up} by building a function that has capabilities outside the limited one ($f(x)=\frac{a_{1}*x^n}{b_{1}} \pm \dots$) that I mentioned before. Let's make the variable $x$ the \textit{divisor}--the denominator--in this new function $f(x)=\frac{1}{x^2} \pm \dots$ (I'll be avoiding throwing decimals everywhere, and will be using the regular domain (11)) and see what happens,
+$$\dots, \frac{-9300}{14400}, \frac{-924}{14400}, \dots$$
+$$\dots, \frac{10600}{14400}, \frac{1300}{14400}, \frac{376}{14400}, \dots$$
+$$\dots, \frac{-10800}{14400}, \frac{-2000}{14400}, \frac{-700}{14400}, \frac{-324}{14400}, \dots$$
+\begin{equation}\dots, \frac{14400}{14400}, \frac{3600}{14400}, \frac{1600}{14400}, \frac{900}{14400}, \frac{576}{14400}, \dots\end{equation}
+This thing goes on forever by the way. Feel free to test everything I've stated so far; it would suck to be wrong about something, but it would be better to know otherwise. In this last example let's switch the $n$ and $x$ in $x^n$ and set $n=3$ which gives us the exponential function $f(x)=3^x$. Here's the results using the domain (11),
+$$\dots, 8, 24, \dots$$
+$$\dots, 4, 12, 36, \dots$$
+$$\dots, 2, 6, 18, 54, \dots$$
+\begin{equation}\dots, 1, 3, 9, 27, 81, \dots\end{equation}
+These go on forever too. Alright, now that that is all done (I hope), let's move on to formula city; woo-hoo! I'll put forth the super simple one, and then we can get the complicated one going on. From the original statement I proclaimed at the beginning, we know that the factorial of the highest power is part of the answer. Then it became known that the \textit{Rate} also depends on what you multiply and divide the variable by, and also by what the Domain progresses by raised to that same power. \newline
+
+\noindent
+Let $d$ represent the difference between the values of whatever domain, $\frac{a_{1}}{b_{1}}$ the numbers directly multiplying and dividing the variable, and $p_{1}$ the highest power, therefore
+\begin{equation}\frac{a_{1}*p_{1}!*d^{p_{1}}}{b_{1}}\end{equation}
+Beautiful! But what good is it just slappin' it here without an example, am I right? I've whipped up the function $f(x)=\frac{4x^3}{21}+\frac{2x^2}{3}-x+9$ for this occasion, and I'll use an arithmetic series that progresses by 2 ($\dots, 0, 2, 4, 6, 8, \dots$) for the domain. Before we dive straight in, I'll be simplifying the function to avoid messy decimals. By simplifying,  it becomes $f(x)=\frac{4x^3+11x^2-21x+189}{21}$. Now, using the formula (18), we get the answer $\frac{4*3!*2^3}{21}=\frac{192}{21}$. To prove it, here's the whole process illustrated as usual,
+$$\dots, \frac{192}{21}, \frac{192}{21}, \dots$$
+$$\dots, \frac{280}{21}, \frac{472}{21}, \frac{664}{21}, \dots$$
+$$\dots, \frac{34}{21}, \frac{314}{21}, \frac{786}{21}, \frac{1450}{21}, \dots$$
+\begin{equation}\dots, \frac{189}{21}, \frac{223}{21}, \frac{537}{21}, \frac{1323}{21}, \frac{2773}{21}, \dots\end{equation}
+
+$$\dots, 2, 2, 2, 2, \dots$$
+\begin{equation}\dots, 0, 2, 4, 6, 8, \dots\end{equation}
+
+\subparagraph{Formula}The time is now ripe and ready for the complicated formula. "How can it get more complicated?", you might ask. It can when you realize that the \textit{process} is formalizable. To make it clear, (18) is just a formula for the \textit{Rate}, and given that the \textit{RoD} is the amount of consecutive differences to get to that, you can then say "To get the \textit{Rate}, you must first take the \textit{RoD}." Remember (3)? I'll reference it below so you can take a look at it again because it represents the process of taking the \textit{RoD}, and is essentially the formula that we're looking for. 
+$$\dots$$
+\begin{equation*}
+\begin{split}
+\dots, (x+3)^n-3(x+2)^n+3(x+1)&^n-x^n,  \\
+(x+4)^n-3(x+3)&^n+3(x+2)^n-(x+1)^n, \dots
+\end{split}
+\end{equation*}
+\begin{equation*}
+\begin{split}
+\dots, (x+2)^n-2&(x+1)^n+x^n, (x+3)^n-2(x+2)^n+(x+1)^n, \\
+&(x+4)^n-2(x+3)^n+(x+2)^n, \dots
+\end{split}
+\end{equation*}
+$$\dots, (x+1)^n-x^n, (x+2)^n-(x+1)^n, (x+3)^n-(x+2)^n, (x+4)^n-(x+3)^n, \dots$$
+\begin{equation}\dots, x^n, (x+1)^n, (x+2)^n, (x+3)^n, (x+4)^n, \dots\end{equation}
+All that's left to do now is to set up a notation, format it using sigma notation, alternate the addition and subtraction, add in the combinatoric stuff, and insert the ability to use different arithmetic progressions for the domain.
+For the notation, let 
+\begin{equation}\textbf{R}(\frac{a_{1}*x^{p_{1}}}{b_{1}} \pm \frac{a_{2}*x^{p_{2}}}{b_{2}} \pm \dots \pm \frac{a_{n}*x^{p_{n}}}{b_{n}})\end{equation}
+represent \textit{Rate}. It's read in the same way as you'd say "$f(x)$", and it's therefore, \textbf{R}--or simply, \textit{The Rate of}--whatever  function in that form. Easy enough, right? Right, so the next, "format it using sigma notation" (the "it" is referring to the sum of variables in (21)) can seem a little tricky at first, but I'll walk you through it as best as my understanding will allow. Alright, so you know how in a summation the values of $k$ usually starts at 0 and goes up an increment of one each time? Well, since we'll know what row in (21)--take for example the top value $(x+3)^n-3(x+2)^n+3(x+1)^n-x^n$--to use, we can therefore assume that we'll start at the plain $x^n$ (also written as $(x+0)^n$ in that example. We can, however, do this multiple ways, but I'm pretty sure the work needed is about equal on whichever path; we're going with this route because it seems like it would be the most common way to go about it all. Also, since the \textit{RoD} \textbf{value} is equal to the highest power to which one of the variables is raised in certain functions, and since there are $p_{1}+1$ amount of terms in--for example--the top row of (21) after taking the \textit{RoD}--which is equal to 3 or $p_{1}$--we therefore have the first part our formula with a reason to start $k$ at zero. Here is is,
+\begin{equation}\sum_{k=0}^{p_{1}}\end{equation}
+And I apologize if I've lost ya; I would otherwise do an in-person lecture if I had the chance. If I haven't, then cool beans. The next parts are, in my opinion, a \textit{bit} simpler. Starting off with the next one, "alternating addition and subtraction," take a look at the first values in the top row of (21),
+\begin{equation*}
+\begin{split}
+\dots, (x+3)^n-3(x+2)^n+3(x+1)&^n-x^n,  \\
+(x+4)^n-3(x+3)&^n+3(x+2)^n-(x+1)^n, \dots
+\end{split}
+\end{equation*}
+See how the end values, $x^n$ and $(x+1)^n$, are \textit{subtracted} and that the \textit{RoD} for this row is the \textbf{odd} number, 3? Also consider the next row down,
+\begin{equation*}
+\begin{split}
+\dots, (x+2)^n-2&(x+1)^n+x^n, (x+3)^n-2(x+2)^n+(x+1)^n, \\
+&(x+4)^n-2(x+3)^n+(x+2)^n, \dots
+\end{split}
+\end{equation*}
+The end values here, $(x+1)^n$ and $(x+2)^n$, are \textit{added} and the \textit{RoD} is the \textbf{even} number, 2. In the next they are subtracted again, and the \textit{RoD} is \textbf{odd}, 1. This pattern can be replicated by raising a negative 1 to whatever the highest power is to start off the sum, and then to have the exponent change in value to alternate the plus and minus, we can subtract $k$ from it. I've added it, and the combinatoric thing--the combinatoric thing because the binomial pattern is made clear in (21), and it's easier to show rather than explain--to (23) below,
+\begin{equation}\sum_{k=0}^{p_{1}}\{ (-1)^{p_{1}-k}\binom{p_{1}}{k}\}\end{equation}
+Although not stated above, the next thing to do is to put the $x$ values into the sum along with the $a_{1}$ and $b_{1}$ values that can directly affect the variable. To be able to add the capability to "use different arithmetic progressions for the domain," let's look at the value in the top row of (21) again, $(x+3)^n-3(x+2)^n+3(x+1)^n-x^n$. As it applies to all others in the other rows, the difference between the progressive values $(1, 2, 3, 4, \dots)$ is 1 and can therefore be modified by simply multiplying them by whatever to invoke the use of different domains. So if you multiply those values by, say 2, the result is $(x+6)^n-3(x+4)^n+3(x+2)^n-x^n$, and if $x$ is set to equal some random number--say, 0--you'll get $(6)^n-3(4)^n+3(2)^n-0^n$. By adding these two things to (24), we've completed the formula! The new version is listed below,
+\begin{equation}\sum_{k=0}^{p_{1}}\{ (-1)^{p_{1}-k}\binom{p_{1}}{k}\frac{a_{1}*(x+kd)^{p_{1}}}{b_{1}}\}\end{equation}
+An example of it's use is provided below as well, \newline
+
+Let $p_{1}=3$, $d=3$, and the function to test be $f(x)=\frac{2x^3}{7}-\frac{21x^2}{13}$, therefore
+\begin{flushleft}
+$\sum_{k=0}^{3}\{ (-1)^{3}\binom{3}{0}\frac{a_{1}*(x+kd)^{3}}{b_{1}}\}=-\frac{a_{1}*x^3}{b_{1}}$
+\end{flushleft}
+\begin{flushleft}
+$\sum_{k=1}^{3}\{ (-1)^{2}\binom{3}{1}\frac{a_{1}*(x+kd)^{3}}{b_{1}}\}=3\frac{a_{1}*(x+1d)^3}{b_{1}}$
+\end{flushleft}
+\begin{flushleft}
+$\sum_{k=2}^{3}\{ (-1)^{1}\binom{3}{2}\frac{a_{1}*(x+kd)^{3}}{b_{1}}\}=-3\frac{a_{1}*(x+2d)^3}{b_{1}}$
+\end{flushleft}
+\begin{flushleft}
+$\sum_{k=3}^{3}\{ (-1)^{0}\binom{3}{3}\frac{a_{1}*(x+kd)^{3}}{b_{1}}\}=\frac{a_{1}*(x+3d)^3}{b_{1}}$
+\end{flushleft}
+$$=\frac{a_{1}*(x+3d)^3}{b_{1}}-3\frac{a_{1}*(x+2d)^3}{b_{1}}+3\frac{a_{1}*(x+1d)^3}{b_{1}}-\frac{a_{1}*x^3}{b_{1}}$$
+Plugging in the values of $a_{1}$, $b_{1}$, and $d$ (in this case it's 2, 7, and 3),
+$$\frac{2*(x+9)^3}{7}-3\frac{2*(x+6)^3}{7}+3\frac{2*(x+3)^3}{7}-\frac{2*x^3}{7}$$
+The value of $x$ can be arbitrary, so for simplicity say $x=0$,
+$$\frac{2*9^3}{7}-\frac{6*6^3}{7}+\frac{6*3^3}{7}$$
+$$=\frac{1458}{7}-\frac{1296}{7}+\frac{162}{7}=\frac{324}{7}$$
+Using (18) to test the result,
+$$\frac{2*3!*3^{3}}{7}=\frac{12*27}{7}=\frac{324}{7}$$
+Also, by method of taking the \text{RoD},
+$$\dots, \frac{4212}{91}=\frac{324}{7}, \dots$$
+$$\dots, \frac{1566}{91}, \frac{5778}{91}, \dots$$
+$$\dots, \frac{-621}{91}, \frac{945}{91}, \frac{6723}{91}, \dots$$
+$$\dots, \frac{0}{91}, \frac{-621}{91}, \frac{324}{91}, \frac{7047}{91}, \dots$$
+
+$$\dots, 3, 3, 3, \dots$$
+$$\dots, 0, 3, 6, 9, \dots$$
+Sweet, it works; I was scared it wouldn't. Now that that's finished, the last thing to do is combine (22) and (18) with (25) to get the complete statement,
+\begin{equation}
+\begin{split}
+&\textbf{R}(\frac{a_{1}*x^{p_{1}}}{b_{1}} \pm \frac{a_{2}*x^{p_{2}}}{b_{2}} \pm \dots \pm \frac{a_{n}*x^{p_{n}}}{b_{n}}) \\
+=\sum_{k=0}^{p_{1}}\{ &(-1)^{p_{1}-k}\binom{p_{1}}{k}\frac{a_{1}*(x+kd)^{p_{1}}}{b_{1}}\}=\frac{a_{1}*p_{1}!*d^{p_{1}}}{b_{1}}
+\end{split}
+\end{equation}
+This marks the end of the \textbf{Research} section of this paper. I'm sure you might be exhausted after reading, so I encourage you to move on to the last section for a very brief summary.
+\section*{Final Thoughts}
+\hspace{0.5cm}Ah, the conclusion, the part that one of you may have skipped too. I don't blame ya if you did; I probably would've after seeing how long this paper is; geez. I'm sure you're here for a summary of sorts, and it kind-of is. For a rough and tough explanation, just look at (26). That there is what I call the \textit{Rate of Difference Theorem}--\textit{Theorem} on account that I don't have proof that it works for all such functions limited to what the notation specifies; I was however, presented with a rather interesting proof conjured up by a Professor friend of mine, but I've got no idea what it was in it's entirety; something to do with the number $e$. Overall, it's use, in combination with other research, leads me to believe the idea to be a great tool for analysis. I'm pretty sure I've touched on everything within the subject, and I know I'll walk away from here feeling great for showing you something of what I think to be\hspace{0.1cm} pretty\hspace{0.1cm} cool. Thanks for reading!
+
+	\end{document}
